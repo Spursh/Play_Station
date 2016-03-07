@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.anushatamanampudi.application.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/price_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textIsSelectable="true"
+        android:layout_alignParentStart="true" />
+    <Button android:id="@+id/scan_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/scan"
+        android:layout_below="@+id/SumTxt"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/SumTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textIsSelectable="true"
+        android:layout_below="@+id/scan_content" />
+
+    <TextView
+        android:id="@+id/scan_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textIsSelectable="true"
+        android:layout_below="@+id/price_content" />
+    <TextView
+        android:id="@+id/scan_format"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/scan_button"
+        android:textColor="#ffffff"
+        android:layout_alignTop="@+id/scan_content"
+        android:layout_above="@+id/SumTxt"
+        android:layout_alignStart="@+id/Cart_button" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/scan_format" />
+
+
+
+    <Button android:id="@+id/Cart_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ShowCart"
+        android:onClick="showcart"
+        android:layout_above="@+id/scrollView"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
